@@ -1,5 +1,6 @@
 ## EX: 6 IMPLEMENTATION OF PSEUDORANDOM NUMBER GENERATION 
-
+## NAME: SRI MATHI S
+## REGISTER NO : 212224230272
 ## AIM:
 To Implement Pseudorandom Number Generation Using Standard library.
 
@@ -14,8 +15,39 @@ To Implement Pseudorandom Number Generation Using Standard library.
 
 
 ## PROGRAM:
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int count, min, max;
+
+    printf("Enter the number of random numbers to generate: ");
+    scanf("%d", &count);
+
+    printf("Enter the minimum value: ");
+    scanf("%d", &min);
+
+    printf("Enter the maximum value: ");
+    scanf("%d", &max);
+
+    srand(time(NULL));
+
+    printf("Pseudorandom numbers:\n");
+    for (int i = 0; i < count; i++) {
+        int random_number = (rand() % (max - min + 1)) + min;
+        printf("%d\n", random_number);
+    }
+
+    return 0;
+}
+
+```
 
 ## OUTPUT:
+<img width="813" height="541" alt="Screenshot 2025-09-17 090947" src="https://github.com/user-attachments/assets/08af8dc9-ebd0-4ef4-8309-81a89f5bfb3b" />
+
 
 ## RESULT:
 The Implementation of Pseudorandom Number Generation Using Standard library is successful.
